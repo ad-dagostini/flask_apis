@@ -1,8 +1,8 @@
 import datetime
 from app import db, ma
 
-class User(db.Model):
-    id = db.Column(db.String(20), primary_key=True, autoincrement=True)
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(200), nullable=False)
     name = db.Column(db.String(60), nullable=False)
